@@ -63,9 +63,16 @@ class BonusPage extends StatelessWidget {
                     ),
                   ),
                 ),
+                Text(
+                  'Pay',
+                  style: whiteTextStyle.copyWith(
+                    fontSize: 16,
+                    fontWeight: medium,
+                  ),
+                ),
               ],
             ),
-            SizedBox(height: 41),
+            const SizedBox(height: 41),
             Text(
               'Balance',
               style: whiteTextStyle.copyWith(
@@ -118,7 +125,9 @@ class BonusPage extends StatelessWidget {
         height: 55,
         margin: const EdgeInsets.only(top: 50),
         child: TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, '/main');
+          },
           style: TextButton.styleFrom(
             backgroundColor: kPrimaryColor,
             shape: RoundedRectangleBorder(
